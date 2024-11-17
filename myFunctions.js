@@ -1,7 +1,6 @@
 const openModel = document.querySelectorAll(".show-modal");
 const modals = document.querySelectorAll(".modal");
 const overlay = document.querySelector(".overlay");
-const over = document.querySelector(".over");
 const closeButtons = document.querySelectorAll(".close-modal");
 const mod = document.querySelector(".mod");
 const showModal = (modal) => {
@@ -10,14 +9,12 @@ const showModal = (modal) => {
 };
 const showModal_select = () => {
   mod.classList.remove("hidden");
-  over.classList.remove("hidden");
 };
 
 const hideModals = () => {
   modals.forEach((modal) => modal.classList.add("hidden"));
   overlay.classList.add("hidden");
   mod.classList.add("hidden");
-  over.classList.add("hidden");
 };
 
 openModel.forEach((button) => {
@@ -37,7 +34,6 @@ closeButtons.forEach((button) => {
 });
 
 overlay.addEventListener("click", hideModals);
-over.addEventListener("click", hideModals);
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
