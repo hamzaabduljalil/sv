@@ -24,7 +24,6 @@ openModel.forEach((button) => {
     console.log(modalToShow);
     if (modalToShow) {
       showModal(modalToShow);
-      console.log(showModal(modalToShow));
     }
   });
 });
@@ -57,7 +56,7 @@ document.querySelector(".send").addEventListener("click", function (e) {
   const phone = document.getElementById("phone");
   const email = document.getElementById("email");
 
-  if (!/^\d{1}$/.test(nationalID.value.trim())) {
+  if (!/^\d{11}$/.test(nationalID.value.trim())) {
     errors.nationalID = "الرقم الوطني يجب أن يكون 11 خانة.";
   }
 
