@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="logo">IWB101</div>
+        <ul class="main-nav">
+          <li><a href="index.html">home</a></li>
+          <li><a href="AboutUs.html">AboutUs</a></li>
+          <li><a href="Books.html">Books</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--  -->
+    <div class="content">
+      <table>
+        <tbody>
+          <tr class="tr">
+            <td>ISBN رمزالكتاب</td>
+            <td>العنوان</td>
+            <td>السعر</td>
+            <td>إظهار التفاصيل</td>
+            <td>اختيار</td>
+          </tr>
+          <tr>
+            <td>978-9770916738</td>
+            <td>الف ليلة وليلة</td>
+            <td>12000 ل.س</td>
+            <td><div id="1" class="show-modal">عرض المزبد</div></td>
+            <td>
+              <label><input type="checkbox" value="الف ليلة وليلة" /></label>
+            </td>
+          </tr>
+          <tr>
+            <td>978-9770916738</td>
+            <td>الف ليلة وليلة</td>
+            <td>12000 ل.س</td>
+            <td><div id="2" class="show-modal">عرض المزبد</div></td>
+            <td>
+              <label><input type="checkbox" value="hamza_231863" /></label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--  -->
+    <div class="modal hidden" id="01">
+      <button class="close-modal">&times;</button>
+      <h1>I'm a modal window 😍</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="modal hidden" id="02">
+      <button class="close-modal">&times;</button>
+      <h1>I'm 2ow 😍</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <!--  -->
+    <button class="next">متابعة</button>
+
+    <!--  -->
+    <form class="details">
+      <div class="form-group">
+        <label for="fullName">الاسم الكامل</label>
+        <input type="text" id="fullName" placeholder="أحرف هجائية فقط" />
+        <div class="error" id="fullNameError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="ID">الرقم الوطني</label>
+        <input type="text" id="ID" placeholder="11 خانة " required />
+        <div class="error" id="nationalIDError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="birth">تاريخ الولادة</label>
+        <input type="text" id="birth" placeholder="dd-mm-yyyy" />
+        <div class="error" id="birthError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">رقم الموبايل</label>
+        <input type="text" id="phone" placeholder="Syriatel أو MTN" />
+        <div class="error" id="phoneError"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">الإيميل</label>
+        <input type="email" id="email" placeholder="example@domain.com" />
+        <div class="error" id="emailError"></div>
+      </div>
+      <button class="send">ارسال</button>
+    </form>
+    <div class="mod hidden">
+      <button class="close-modal">&times;</button>
+      <h1><div id="result"></div></h1>
+    </div>
+    <div class="over hidden"></div>
+
+    <script src="myFunctions.js"></script>
+  </body>
+</html>
